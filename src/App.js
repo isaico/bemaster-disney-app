@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Home } from './components/Home/Home.jsx';
+import { ContentCategory } from './components/contentCategory/ContentCategory.jsx';
 import './App.css';
+import { ContentDetails } from './components/contentDetails/ContentDetails.jsx';
+// import MoviesContextProvider from './context/MoviesContext.js';
+import { Login } from './components/Login/Login.jsx';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <div>Hola desde app</div>
+            <BrowserRouter>
+                <Routes>
+                    <Route exact path="/" element={<Login />} />
+                    <Route exact path="/home" element={<Home />} />
+                    <Route
+                        exact
+                        path="/home/:urlCategory"
+                        element={<ContentCategory />}
+                    />
+                    <Route
+                        exact
+                        path="/home/:urlCategory/detail/:urlIdItem"
+                        element={<ContentDetails />}
+                    />
+                </Routes>
+            </BrowserRouter>
+        </>
+    );
 }
 
 export default App;
