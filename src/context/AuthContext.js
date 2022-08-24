@@ -4,12 +4,19 @@ export const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
     const [user, setUser] = useState({});
+    const [inputError, setInputError] = useState("");
 
     const handleUser = (User) => {
-        console.log(User,"handleUser del context")
         setUser(User);
     };
+    const handleInputError = (error) => {
+        setInputError(error);
+    };
     return (
-        <AuthContext.Provider value={{ user,handleUser }}>{children}</AuthContext.Provider>
+        <AuthContext.Provider
+            value={{ user, handleUser, inputError, handleInputError }}
+        >
+            {children}
+        </AuthContext.Provider>
     );
 };
