@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { register, login, logout } from '../../helpers/loginFunctions/login.js';
+import { register, login} from '../../helpers/loginFunctions/login.js';
 import { useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext.js';
 import { Link } from 'react-router-dom';
@@ -91,7 +91,7 @@ export const Login = () => {
                     </div>
                 )}
             </div>
-            <button onClick={() => logout(handleUser)}> Deslogear </button>
+            {/* <button onClick={() => logout(handleUser)}> Deslogear </button> */}
         </div>
     );
 };

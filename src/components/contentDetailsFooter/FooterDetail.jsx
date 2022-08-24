@@ -15,8 +15,12 @@ export const FooterDetail = ({ item }) => {
                     <p>{item.realeaseDate}</p>
                 </div>
                 <div>
+                    <p>Clasificacion:</p>
+                    <p>+{item.clasification}</p>
+                </div>
+                <div>
                     <p>Genero:</p>
-                    <p>+{item.movieGenre}</p>
+                    <p>{item.movieGenre}</p>
                 </div>
             </div>
         </>

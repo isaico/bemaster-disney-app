@@ -1,10 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CardCategory } from './CardCategory.jsx';
+import { NavBar } from '../navBar/NavBar.jsx';
+
 
 export const Home = () => {
-    return (
+    
+    return (    
+
         <div className="homeContainer">
+            
+            <NavBar />
             <Link to="/home/disney" className="">
                 <CardCategory
                     alt="logo of disney"

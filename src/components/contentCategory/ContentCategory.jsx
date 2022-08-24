@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { getFirestore } from '../../firebase/fireBase.js';
+import { NavBar } from '../navBar/NavBar.jsx';
 import { ItemList } from './ItemList.jsx';
-// import { ActivateMoviesContext } from '../../context/MoviesContext.js';
+import { Loader } from '../Loader/Loader.jsx';
 
 export const ContentCategory = () => {
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
     const { urlCategory } = useParams();
-    // const { setItemsList, addItem, itemsList } = ActivateMoviesContext();
 
     useEffect(() => {
         const db = getFirestore();
@@ -28,9 +28,6 @@ export const ContentCategory = () => {
                     setItems(
                         data.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
                     );
-                    // setItemsList(
-                    //     data.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
-                    // );
                 })
 
                 .catch((error) => console.log(error))
@@ -45,9 +42,6 @@ export const ContentCategory = () => {
                     setItems(
                         data.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
                     );
-                    // setItemsList(
-                    //     data.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
-                    // );
                 })
                 .catch((error) => console.log(error))
                 .finally(() => setLoading(false));
@@ -56,8 +50,9 @@ export const ContentCategory = () => {
 
     return (
         <div id="itemList">
-             "lista de items del context"
-            {loading ? 'Cargando...' : <ItemList items={items} />}
+            <NavBar />
+            
+            {loading ? <Loader /> : <ItemList items={items} urlCategory={urlCategory}/>}
         </div>
     );
 };
