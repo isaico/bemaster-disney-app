@@ -1,0 +1,9 @@
+.allMovies{
+    display: flex;
+    flex-wrap: wrap;
+    background-image: var(--background-gradient);
+    /* justify-items: flex-start; */
+    align-items: center;
+    height: 100vh;
+    padding:0 50px;
+}

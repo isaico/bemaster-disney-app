@@ -8,6 +8,7 @@ import { AuthContextProvider } from './context/AuthContext.js';
 import { PrivateRoute } from './components/PrivateRoute/PrivateRoute.jsx';
 import { AllMovies } from './components/allMovies/AllMovies.jsx';
 import {VideoPlayer} from './components/contentDetails/VideoPlayer.jsx'
+import './vars.css'
 function App() {
     return (
         <>

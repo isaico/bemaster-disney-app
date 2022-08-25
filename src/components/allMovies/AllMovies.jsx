@@ -3,7 +3,9 @@ import { useEffect, useState } from 'react';
 import { getFirestore } from '../../firebase/fireBase.js';
 import { ItemList } from '../contentCategory/ItemList';
 import { NavBar } from '../navBar/NavBar.jsx';
-import {Loader} from '../Loader/Loader.jsx'
+import { Loader } from '../Loader/Loader.jsx';
+import './allMovies.css';
+
 export const AllMovies = () => {
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -25,7 +27,13 @@ export const AllMovies = () => {
     return (
         <div>
             <NavBar />
-            {loading ? <Loader /> : <ItemList items={items} />}
+            {loading ? (
+                <Loader />
+            ) : (
+                <div className="allMovies">
+                    <ItemList items={items} />
+                </div>
+            )}
         </div>
-    )
+    );
 };

@@ -30,12 +30,12 @@ export const ContentDetails = () => {
     }, [urlIdItem]);
 
     return (
-        <div id="itemDetails">
+        <>
             {loading ? (
                 <Loader />
             ) : (
                 <ItemDetail key={urlIdItem} item={itemDetail} itemId={urlIdItem} />
             )}
-        </div>
+        </>
     );
 };

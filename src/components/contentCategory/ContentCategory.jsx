@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { getFirestore } from '../../firebase/fireBase.js';
 import { NavBar } from '../navBar/NavBar.jsx';
 import { ItemList } from './ItemList.jsx';
 import { Loader } from '../Loader/Loader.jsx';
-
+import { CategoryHeader } from './CategoryHeader.jsx';
+import './category.css';
 export const ContentCategory = () => {
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -49,10 +50,18 @@ export const ContentCategory = () => {
     }, [urlCategory]);
 
     return (
-        <div id="itemList">
+        <div className="category">
             <NavBar />
-            
-            {loading ? <Loader /> : <ItemList items={items} urlCategory={urlCategory}/>}
+            {loading ? (
+                <Loader />
+            ) : (
+                <div className="category__main">
+                    <CategoryHeader category={urlCategory} />
+                    <div className="category__list">
+                        <ItemList items={items} urlCategory={urlCategory} />
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

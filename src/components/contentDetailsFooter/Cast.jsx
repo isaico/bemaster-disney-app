@@ -3,12 +3,10 @@ import React from 'react';
 export const Cast = ({ item }) => {
     return (
         <>
-            <ol>
-                elenco:
+            <ol className="footer__cast">
+                
                 {item.cast.map((i) => (
-                    <div key={i}>
-                        <li>{i}</li>
-                    </div>
+                    <li className="footer__cast__member" key={i}>{i}</li>
                 ))}
             </ol>
         </>

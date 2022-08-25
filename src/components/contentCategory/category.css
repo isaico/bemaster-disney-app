@@ -1,0 +1,30 @@
+.category {
+    background-image: var(--background-gradient);
+    height: 100vh;
+}
+.category__header {
+    max-width: 500px;
+    align-self: center;
+}
+.category__main {
+    display: flex;
+    flex-direction: column;
+}
+.category__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.category__list__item img {
+    margin: 50px;
+    border-radius: 0.3em;
+    box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+        rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+}
+.category__list__item:hover img{
+    transform: scale(1.1);
+    transition: all ease 0.2s;
+    border: 10px white;
+    box-shadow: rgb(0 0 0 / 69%) 0px 26px 40px -20px,
+        rgb(0 0 0 / 73%) 0px 0px 50px 0px;
+    
+}

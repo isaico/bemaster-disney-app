@@ -1,0 +1,66 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--background-color);
+    height: 80px;
+    z-index:10;
+}
+.nav__logo {
+    margin-left: 20px;
+    width: 80px;
+}
+.nav__links {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__links--decoration {
+    text-decoration: none;
+    margin: 0 40px ;
+    font-size: 1.2em;
+    color: var(--text-color-white);
+    font-weight: bold;
+    position: relative;
+}
+.nav__links--decoration::after{
+    content: "";
+    position: absolute;
+    background-color: var(--text-color-white);
+    height: 4px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s ease;
+}
+
+.nav__links--decoration:hover::after {
+    width: 100%;
+}
+.nav__user {
+    display: flex;
+    align-items: center;
+}
+.nav__user__email {
+    font-size: 1.2em;
+    padding-right: 40px;
+    color: var(--text-color-white);
+}
+.nav__user__btn {
+    height: 40px;
+    border: none;
+    background-color: var(--button-main-color);
+    color: var(--text-color-white);
+    border-radius: 1em;
+    margin-right: 20px;
+}
+.nav__user__btn:hover {
+    cursor: pointer;
+    background-color: var(--button-main-color-lighter);
+}

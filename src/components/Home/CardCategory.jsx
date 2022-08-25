@@ -1,10 +1,5 @@
 import React from 'react';
-
-export const CardCategory = ({ title, imgSrc, alt }) => {
-    return (
-        <div>
-            <h2>{title}</h2>
-            <img alt={alt} src={imgSrc} />
-        </div>
-    );
+import './home.css';
+export const CardCategory = ({ imgSrc, alt }) => {
+    return <img className="card__category" alt={alt} src={imgSrc} />;
 };

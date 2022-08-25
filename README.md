@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Presentacion
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+¡Hola que tal! Me presento soy Isaías García, un joven dedicado, con ganas de progresar y aprender, estoy muy entusiasmado con la oportunidad y espero poder aplicar para ser el desarrollador frontend que buscan!
 
-## Available Scripts
+# Descripcion de la app
 
-In the project directory, you can run:
+Realizado con react, este aplicativo web sigue los parametros enviados por el pdf para la creacion de los componentes solicitados.
+
+● Componente llamado 'Login' (implementando la lógica de validación de
+campos vacíos y caracteres permitidos para el campo de email)
+● Componente llamado 'Home' que contenga 5 cards, los cuales
+representan las categorías a las cuales ese usuario logueado tendrá
+acceso y un navbar básico (dejarémos que tu sensibilidad a la fuerza te
+provea la inspiración para proponer los links que deben estar en el
+navbar).
+● Componente llamado contentCategory donde se presente, por filas,
+todo el contenido relacionado a la categoría seleccionada desde el
+componente 'Home'.
+● Un componente llamado contentDetails donde se visualice el contenido
+multimedia seleccionado desde el componente contentCategory y su
+respectiva sinopsis o resumen.
+
+---
+
+### Persistencia
+
+Para la persistencia de datos utilicé `Firebase` y también lo utilicé para la Autenticación vía Email y Contraseña
+
+Aquí proporciono un usuario ya creado `email:a@a.com` y `contraseña:asd123`, pero sentite libre de crear un nuevo usuario...
+
+La base de datos tiene dummy info que luego debe ser modificada para mostrar información más acertada
+
+### Estilos
+
+El estilo está determinado por cada componente, utilice archivos CSS, ya que no se especificó el modo de uso, está basado en la metodología BEM e inspirado como
+bien se puede apreciar en la plataforma Disney+
+
+Utilice varias medidas estáticas por temas prácticos, ya que no está pensado para responsividad
+
+## Flow de la app
+
+-   En la raíz se obtiene un Login/register que autoriza la navegación de rutas privadas.
+
+-   Una vez autorizado podemos navegar entre las categorías provistas por el componente `contentCategory` que nos dará paso a una lista de datos cargada dependiendo la categoría seleccionada.
+
+-   Al seleccionar una película de cualquier categoría nos enviará a un componente de detalle `contentDetails` donde se podrá ver la info del ítem seleccionado,
+
+-   También cuenta con un simulador de reproductor realizado con la librería `react-player`
+
+## Script para levantar el proyecto
+
+En el directorio del proyecto, puede ejecutar:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ejecuta la aplicación en el modo de desarrollo.\
+Abrir [http://localhost:3000](http://localhost:3000) para verlo en su navegador.

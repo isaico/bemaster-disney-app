@@ -1,0 +1,21 @@
+.home{
+    /* background-color:var(--background-color) */
+    background-image:  var(--background-gradient);
+    height:100vh;
+}
+.card__category{
+    width: 250px;
+    margin-top:80px;
+    background: linear-gradient(rgb(48, 50, 62), rgb(30, 31, 42));
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+}
+.home__category__container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.card__category:hover{
+    transform: scale(1.1);
+    transition: all ease .3s
+}

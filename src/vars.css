@@ -1,0 +1,23 @@
+:root {
+    --text-color-white: #f9f9f9;
+    --button-main-color: #6421ff;
+    --button-main-color-lighter: #7338fce3;
+    --background-color: rgb(26, 29, 41);
+    --button-black-color: #000000cc;
+    --background-gradient: linear-gradient(
+        to bottom,
+        #1a1d29,
+        #1d212e,
+        #212434,
+        #242839,
+        #282c3f
+    );
+    --background-gradient-opacity: linear-gradient(
+        to right top,
+        #1a1d29,
+        #1a1d29,
+        #1a1d29dc,
+        #1a1d29a6,
+        #1a1d2900
+    );
+}
